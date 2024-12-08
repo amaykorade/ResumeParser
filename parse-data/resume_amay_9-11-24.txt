@@ -1,0 +1,84 @@
+Amay Korade
+
+Full Stack Developer — 1+ Years
+
+ Pune, Maharashtra   9146837805  amaykorade5@gmail.com   LinkedIn	Github
+
+Profile Summary
+
+Full-stack developer with expertise in React.js, Node.js and MongoDB, delivering impactful web applications and leading technical teams.
+
+Experience
+
+CadAndCart	August 2023 – January 2024
+
+Frontend Developer	Pune, Maharashtra
+
+Migrated legacy JavaScript code to React for improved performance and maintainability.
+
+Implemented a new state management system using Redux-toolkit, leading to a significant improvement in application performance and developer productivity.
+
+Collaborated closely with the backend team to integrate the model prediction API and optimized the UI for better performance and usability.
+
+Projects
+
+Company listing |  GitHub | View | Javascript, React.js, Redux-toolkit, Node.js	Present
+
+Developed a platform to list and filter companies based on specific criteria.
+
+Implemented a wishlist feature to save preferred companies.
+
+Integrated email functionality to facilitate direct communication with hiring managers.
+
+E-commerce Platform | GitHub | View | HTML, CSS, Javascript, React.js, Redux-toolkit, Node.js	April 2024
+
+User Authentication: Secure user login and registration with JWT-based authentication and role-based access control.
+
+Product Management: CRUD operations for musical instruments with filtering and search functionality for better user experience.
+
+Payment Integration: Integrated Razorpay for secure online payments with order creation, payment verification, and handling payment failures.
+
+Database: MongoDB with Mongoose for data modeling, schema management, and relationships.
+
+Middleware and Security: Custom middleware for authentication, error handling, and file uploads; environment variables for secure configuration management.
+
+Placement Cell  | GitHub | View | HTML, CSS, JavaScript, Node.js	January 2023
+
+Developed a platform for company-student interactions.
+
+Implemented CSV download feature for company applications.
+
+Enhanced user experience for seamless navigation.
+
+Car booking application |  View | html, css, javascript	November 2022
+
+The project is all about renting cars, the platform offers variety of cars from the business owner who rents the car for vacations, the user can book the car from the platform via website, the user can see which cars are available and what are there rates and conditions of the car.
+
+Technical Skills
+
+Programming Languages: Java, HTML/CSS, JavaScript, Node.js, System Design
+
+Databases: MongoDB, Firebase
+
+Developer Tools: VS Code
+
+Frameworks: Node.js, Express, GitHub, Redux-toolkit, JWT, Socket.IO,
+
+Additional Skills: DSA, OOPS
+
+Soft Skills: Communication, teamwork
+
+Education
+
+Savitribai Phule Pune University (CGPA: 6.9)	2021 – 2025
+
+Bachelor of Engineering in Computer Engineering	Pune, Maharashtra
+
+Trainings
+
+Coding Ninjas	Feb 2023 – Feb 2024
+
+Full Stack Web Development
+
+Backend | Frontend | Java |
+

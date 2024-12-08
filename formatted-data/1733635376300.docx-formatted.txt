@@ -1,0 +1,35 @@
+Here's the extracted information from the resume text:
+
+1. **Full Name:** Amay Korade
+
+2. **Contact Information:**
+    * Phone: 9146837805
+    * Email: amaykorade5@gmail.com
+
+3. **Location:** Pune, Maharashtra
+
+4. **Skills:**
+
+    * **Programming Languages:** Java, HTML/CSS, JavaScript, Node.js, System Design
+    * **Databases:** MongoDB, Firebase
+    * **Developer Tools:** VS Code
+    * **Frameworks:** Node.js, Express, Redux-toolkit, JWT, Socket.IO
+    * **Other Skills:** React.js, DSA, OOPS,  State Management (Redux-toolkit),  Mongoose,  API Integration,  Middleware Development,  Secure Authentication (JWT),  Role-Based Access Control,  Payment Integration (Razorpay),  CSV Download Functionality,  UI Optimization.
+    * **Soft Skills:** Communication, teamwork
+
+
+5. **Education:**
+
+    * Savitribai Phule Pune University (CGPA: 6.9)  2021 – 2025
+    * Bachelor of Engineering in Computer Engineering, Pune, Maharashtra
+
+6. **Work Experience:**
+
+    * **CadAndCart** (August 2023 – January 2024)
+        * Frontend Developer, Pune, Maharashtra
+        * Migrated legacy JavaScript code to React.
+        * Implemented a new state management system using Redux-toolkit.
+        * Collaborated with the backend team to integrate a model prediction API.
+
+
+    *(Note: The "Projects" section details project work, not formal employment.  It demonstrates skills and initiative, but isn't structured like traditional work experience.)*

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Upload Application</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      .upload-container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+      }
+      #file-input {
+        display: none;
+      }
+      .file-label {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .file-label:hover {
+        background-color: #0056b3;
+      }
+      #file-name {
+        margin-top: 15px;
+        color: #666;
+      }
+      #upload-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #upload-btn:hover {
+        background-color: #218838;
+      }
+      #upload-btn:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+      #status {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="upload-container">
+      <h1>Resume Upload</h1>
+      <input type="file" id="file-input" accept=".pdf,.docx" />
+      <label for="file-input" class="file-label"> Choose File </label>
+      <div id="file-name"></div>
+      <button id="upload-btn" disabled>Upload Resume</button>
+      <div id="status"></div>
+      <textarea type="text" id="analyse-inp" rows="10" cols="50"></textarea>
+      <button id="analyse-btn">Analyse</button>
+    </div>
+
+    <script>
+      const fileInput = document.getElementById("file-input");
+      const fileNameDisplay = document.getElementById("file-name");
+      const uploadBtn = document.getElementById("upload-btn");
+      const statusDisplay = document.getElementById("status");
+
+      const analyseInput = document.getElementById("analyse-inp");
+      const analyseBtn = document.getElementById("analyse-btn");
+
+      fileInput.addEventListener("change", function () {
+        console.log("File selection triggered.");
+        if (this.files && this.files[0]) {
+          const file = this.files[0];
+          const fileName = file.name;
+          const fileType = file.type;
+          const fileSize = file.size;
+
+          // Validate file type
+          const allowedTypes = [
+            "application/pdf",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          ];
+
+          if (!allowedTypes.includes(fileType)) {
+            fileNameDisplay.textContent =
+              "Invalid file type. Please upload PDF or DOCX.";
+            uploadBtn.disabled = true;
+            return;
+          }
+
+          // Validate file size (max 5MB)
+          if (fileSize > 5 * 1024 * 1024) {
+            fileNameDisplay.textContent =
+              "File is too large. Maximum size is 5MB.";
+            uploadBtn.disabled = true;
+            return;
+          }
+
+          fileNameDisplay.textContent = `Selected File: ${fileName}`;
+          uploadBtn.disabled = false; // Enable button after validation
+        }
+      });
+
+      uploadBtn.addEventListener("click", function () {
+        if (fileInput.files.length === 0) {
+          statusDisplay.textContent = "Please select a file first.";
+          return;
+        }
+
+        const formData = new FormData(); // Create FormData instance
+        formData.append("resume", fileInput.files[0]); // Append selected file
+
+        statusDisplay.textContent = "Uploading...";
+        uploadBtn.disabled = true;
+
+        fetch("/upload", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            statusDisplay.textContent = data;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            statusDisplay.textContent = "Error uploading file";
+          })
+          .finally(() => {
+            uploadBtn.disabled = false;
+          });
+      });
+
+      analyseBtn.addEventListener("click", function () {
+        const jobDescription = analyseInput.value.trim();
+        const userId = fileInput.files[0]?.name?.split(".")[0];
+
+        console.log("userId :", userId);
+        // console.log("userId :", jobDescription);
+
+        if (!jobDescription || !userId) {
+          statusDisplay.textContent =
+            "Please enter a job description and upload a file first";
+        }
+
+        statusDisplay.textContent = "Analyzing...";
+
+        fetch("/analyze", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ jobDescription, userId }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              statusDisplay.textContent = "Analysis completed successfully!";
+              console.log("Analysis Data:", data.analysis);
+            } else {
+              statusDisplay.textContent = data.message || "Analysis failed.";
+            }
+          })
+          .catch((error) => {
+            console.error("Error: ", error);
+            statusDisplay.textContent = "Error analyzing the resume";
+          });
+      });
+    </script>
+  </body>
+</html>

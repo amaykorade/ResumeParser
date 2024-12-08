@@ -1,0 +1,31 @@
+Here's the extracted information from the provided resume text:
+
+1. **Full Name:** Amay Korade
+
+2. **Contact Information:**
+    * **Phone:** 9146837805
+    * **Email:** amaykorade5@gmail.com
+
+3. **Location:** Pune, Maharashtra
+
+4. **Skills:**
+
+    * **Programming Languages:** Java, HTML/CSS, JavaScript, Node.js, System Design
+    * **Databases:** MongoDB, Firebase
+    * **Developer Tools:** VS Code
+    * **Frameworks:** Node.js, Express, Redux-toolkit, JWT, Socket.IO
+    * **Additional Skills:** DSA, OOPS
+    * **Soft Skills:** Communication, teamwork
+    * **Specific Technologies/Libraries:** React.js,  Redux-toolkit, Mongoose
+
+
+5. **Education:**
+
+    * **Savitribai Phule Pune University:** Bachelor of Engineering in Computer Engineering (2021-2025), CGPA: 6.9, Pune, Maharashtra
+
+6. **Work Experience:**
+
+    * **CadAndCart (August 2023 – January 2024):** Frontend Developer, Pune, Maharashtra.  Responsibilities included migrating legacy JavaScript code to React, implementing a new state management system using Redux-toolkit, and collaborating with the backend team on API integration and UI optimization.
+
+
+**Note:**  The "Projects" section details projects undertaken, which could be considered part of work experience or a separate category depending on how you want to organize the information.  I've chosen not to include it directly under "Work Experience" given it doesn't list a formal employer. The "Trainings" section is also omitted as it's not work experience in the traditional sense.
